@@ -65,8 +65,6 @@ public class UserDaoJDBCimpl implements UserDao {
 
     @Override
     public boolean checkUserByNameDao(String name) throws SQLException {
-        User user = null;
-        long id = 0L;
         String sql = "SELECT * FROM users WHERE name = ?";
         try (PreparedStatement preStmt = connection.prepareStatement(sql)) {
 
